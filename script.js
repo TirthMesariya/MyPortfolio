@@ -122,35 +122,7 @@
             });
         });
 
-        // Contact form handling
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const subject = formData.get('subject');
-            const message = formData.get('message');
-            
-            // Simple validation
-            if (!name || !email || !subject || !message) {
-                alert('Please fill in all fields');
-                return;
-            }
-            
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert('Please enter a valid email address');
-                return;
-            }
-            
-            // Success message (in a real app, you'd send this to a server)
-            alert('Thank you for your message! I\'ll get back to you soon.');
-            this.reset();
-        });
-
+       
         // Add some interactive hover effects
         document.querySelectorAll('.glass-card, .skill-category, .project-card').forEach(card => {
             card.addEventListener('mouseenter', function() {
